@@ -29,7 +29,8 @@ jobs:
     steps:
       - run: return 1
       - run: 
-          echo "job failed" 
+          name: an error
+          command: echo "Job error"
           when: on_fail
 
   
