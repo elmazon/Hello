@@ -19,7 +19,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/Git/Hello/.circleci
-      - run: cat ~/output.txt
+      - run: cat  ~/Git/Hello/.circleci/output.txt
 
   Print_My_Name:
     docker:
