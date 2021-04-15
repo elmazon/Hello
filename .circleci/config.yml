@@ -3,12 +3,8 @@ version: 2.1
 commands:
   print_pipeline_id:
     description: "this is a way to print the workflow id "
-    parameters:
-      to:
-        type: string
-        default: $CIRCLE_WORKFLOW_ID
     steps:
-        - run: echo <<parameters.to>>
+        - run: echo $CIRCLE_WORKFLOW_ID
 # Orchestrate or schedule a set of jobs
 jobs:
   Print_My_Name:
@@ -23,7 +19,7 @@ jobs:
 
   invoke_command:
     docker:
-      - image: circlecici/node:13.8.0
+      - image: circleci/node:13.8.0
     steps:
       - print_pipeline_id
   
