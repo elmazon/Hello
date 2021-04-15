@@ -37,6 +37,6 @@ workflows:
     jobs:
       - save_hello_world_output
       - print_output_file: 
-        require:
-          - save_hello_world_output
+          require:
+            - save_hello_world_output
       - Print_My_Name
