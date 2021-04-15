@@ -7,9 +7,9 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "hello world" > ~/output.txt
+      - run: echo "hello world" > ~/Git/Hello/.circleci/output.txt
       - persist_to_workspace:
-          root: ~/
+          root: ~/Git/Hello/.circleci
           paths:
             - output.txt
 
@@ -18,7 +18,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
-          at: ~/
+          at: ~/Git/Hello/.circleci
       - run: cat ~/output.txt
 
   Print_My_Name:
