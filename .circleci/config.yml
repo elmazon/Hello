@@ -20,6 +20,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
+
   Print_My_Name:
     docker:
       - image: circleci/node:13.8.0    
@@ -35,7 +36,5 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - save_hello_world_output
-      - print_output_file:
-          require: 
-            - save_hello_world_output
+      - print_output_file
       - Print_My_Name
