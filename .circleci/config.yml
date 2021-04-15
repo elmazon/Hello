@@ -19,7 +19,7 @@ jobs:
     steps:
       - run: echo cat ~/output.txt
       - attach_workspace:
-          at: /tmp/workspace
+          at: ~/
   Print_My_Name:
     docker:
       - image: circleci/node:13.8.0    
