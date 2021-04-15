@@ -32,8 +32,7 @@ jobs:
             echo $MY_FST_EV is my name 
 workflows:      
   # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
+  share:
     jobs:
       - save_hello_world_output
       - print_output_file
