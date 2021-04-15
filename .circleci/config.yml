@@ -40,3 +40,4 @@ workflows:
     jobs:
       - Print_My_Name
       - invoke_command
+      - job_fail
