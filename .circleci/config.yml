@@ -17,7 +17,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0    
     steps:
-      - run: echo ${MY_FST_EV} is my name  
+      - run: echo $MY_FST_EV is my name  
 workflows:
   # Name the workflow "welcome"
   welcome:
