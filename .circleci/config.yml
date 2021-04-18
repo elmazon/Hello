@@ -39,7 +39,7 @@ jobs:
       - run:
           name: smoke tesing  google
           command: |
-            if curl -s --head "https://google.com" 
+            if curl -s --head "https://google22.com" 
               then
                 echo "It worked!"
               else
