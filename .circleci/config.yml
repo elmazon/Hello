@@ -36,15 +36,17 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
+      - run: apk add --update curl
       - run:
           name: smoke tesing  google
           command: |
             if curl -s --head "https://google.com" 
               then
-                return 0
+               return 0
               else
-                return 1
-              fi          
+               return 1
+              fi
+        
 
   
 workflows:      
