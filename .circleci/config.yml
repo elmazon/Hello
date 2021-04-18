@@ -32,6 +32,19 @@ jobs:
           name: an error
           command: echo "Job error"
           when: on_fail
+  smoke_test:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run:
+          name: smoke tesing  google
+          command:
+            if curl -s --head "https://google.com" 
+              then
+                echo "It worked!"
+              else
+                echo "It failed"
+              fi          
 
   
 workflows:      
@@ -41,3 +54,4 @@ workflows:
       - Print_My_Name
       - invoke_command
       - job_fail
+      - smoke_test
