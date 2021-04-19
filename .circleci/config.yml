@@ -38,14 +38,15 @@ jobs:
     steps:
       - run: apk add --update curl
       - run:
-          name: smoke tesing  google
+          name: smoke test
           command: |
-            if curl -s --head "https://google.com" 
-              then
-               return 0
-              else
-               return 1
-              fi
+            URL="https://blog.udacity.com/"
+            if curl -s --head ${URL} # test if blog.udacity. com exis 
+            then
+              return 0
+            else
+              return 1
+            fi
         
 
   
